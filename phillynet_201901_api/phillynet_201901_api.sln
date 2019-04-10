@@ -3,11 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MlbTeamsApi", "MlbTeamsApi\MlbTeamsApi.csproj", "{BF2CBF12-F6FE-45E2-B227-AA941A1D29A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MlbTeamsTest", "MlbTeamsTest\MlbTeamsTest.csproj", "{4E621C12-3DE9-44F8-B146-C34732AF441E}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5919C392-EF91-465A-8355-1CFB42724420}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF2CBF12-F6FE-45E2-B227-AA941A1D29A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF2CBF12-F6FE-45E2-B227-AA941A1D29A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF2CBF12-F6FE-45E2-B227-AA941A1D29A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF2CBF12-F6FE-45E2-B227-AA941A1D29A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E621C12-3DE9-44F8-B146-C34732AF441E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E621C12-3DE9-44F8-B146-C34732AF441E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E621C12-3DE9-44F8-B146-C34732AF441E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E621C12-3DE9-44F8-B146-C34732AF441E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 EndGlobal

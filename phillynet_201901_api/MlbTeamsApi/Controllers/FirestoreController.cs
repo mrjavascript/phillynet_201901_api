@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using MlbTeamsApi.Models;
 using MlbTeamsApi.Services;
 
 namespace MlbTeamsApi.Controllers
@@ -19,12 +21,22 @@ namespace MlbTeamsApi.Controllers
         [ProducesResponseType(typeof(IEnumerable<string>), 200)]
         [ProducesResponseType(typeof(IDictionary<string, string>), 400)]
         [ProducesResponseType(500)]
-        public string[] Get()
-//        public async Task<ActionResult<List<string>>> Get()
+        public ActionResult<List<TeamModel>> Get()
         {
-            return new string[] {"value1", "value2"};
-//            var values = await _valuesService.GetValues();
-//            return values.ToList();
+            var teams = _firestoreService.GetTeams();
+            return teams.ToList();
+        }
+
+        [HttpPost]
+        public string Post([FromBody] TeamModel teamModel)
+        {
+            return _firestoreService.CreateTeam(teamModel);
+        }
+
+        [HttpDelete("{id}")]
+        public void Delete(string id)
+        {
+            _firestoreService.DeleteTeam(id);
         }
     }
 }

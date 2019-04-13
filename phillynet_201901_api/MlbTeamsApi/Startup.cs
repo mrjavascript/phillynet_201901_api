@@ -27,13 +27,13 @@ namespace MlbTeamsApi
         public void ConfigureServices(IServiceCollection services)
         {
             //add cors service
-//            services.AddCors(options => options.AddPolicy("Cors",
-//                builder =>
-//                {
-//                    builder.AllowAnyOrigin()
-//                        .AllowAnyMethod()
-//                        .AllowAnyHeader();
-//                }));
+            services.AddCors(options => options.AddPolicy("Cors",
+                builder =>
+                {
+                    builder.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader();
+                }));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
@@ -98,7 +98,7 @@ namespace MlbTeamsApi
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1"); });
 
-//            app.UseCors("Cors");
+            app.UseCors("Cors");
             app.UseHttpsRedirection();
             app.UseMvc();
         }
